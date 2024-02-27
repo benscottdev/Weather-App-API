@@ -39,7 +39,7 @@ function WeatherContainer() {
 
   useEffect(() => {
     getData();
-  }, [searchInput, period]);
+  }, [getData]);
 
   return (
     <div className="weather-container">
