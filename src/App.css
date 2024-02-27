@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "F25";
+  src: url("./assets/F25_Bank_Printer.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111111;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.weather-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2f2f2f;
+  padding: 20px;
+}
+
+.weather-container h1 {
+  color: #f6f6f6;
+  font-family: "F25";
+}
+
+.weather-container button {
+  cursor: pointer;
+  border: none;
+  background-color: #ffcb74;
+  color: #111111;
+  margin: 10px 5px;
+  text-align: center;
+  padding: 6px;
+  font-weight: 100;
+}
+
+.weather-container input {
+  border: 1px solid #f6f6f6;
+
+  padding: 10px;
+  background-color: transparent;
+  width: 180px;
+  color: white;
+  font-weight: 900;
+}
+
+.search-bar button {
+  height: 35px;
+  width: 35px;
+}
+
+.search-bar button:hover {
+  font-weight: 900;
+}
+
+.buttons button {
+  font-weight: 900;
+  padding: 5px 15px;
+}
+
+.buttons button:hover {
+  box-sizing: border-box;
+  color: #f6f6f6;
+}
+
+.city-name h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 100;
+  margin-top: 40px;
+}
+
+.seven-days-weather {
+  display: flex;
+  gap: 3px;
+}
+
+.seven-day-item {
+  color: #f6f6f6;
+  background-color: transparent;
+  border: 1px solid #ffcb74;
+  padding: 15px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90px;
+}
+#date {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+
+#temp-value {
+  margin-top: 7.5px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.current-weather-item {
+  color: #f6f6f6;
+  background-color: transparent;
+  border: 1px solid #ffcb74;
+  padding: 15px;
+  font-size: 10px;
+
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+}
+
+#current-temp-text {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+#current-temp-value {
+  font-weight: 100;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+#current-cond-text {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+#current-cond-value {
+  font-weight: 100;
+  font-size: 14px;
+  margin-left: 10px;
+}
