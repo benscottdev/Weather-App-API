@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import SearchBar from "./SearchBar";
 import CurrentWeather from "./CurrentWeather";
 import SevenDays from "./SevenDays";
@@ -26,7 +26,7 @@ function WeatherContainer() {
   const apiKey = "V86PCUA227YRQU4L42X2KSJRD";
   const baseUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchInput}/${period}?unitGroup=metric&key=${apiKey}`;
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     try {
       const response = await fetch(baseUrl);
       const data = await response.json();
@@ -35,7 +35,7 @@ function WeatherContainer() {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  };
+  }, [baseUrl, setApiData]);
 
   useEffect(() => {
     getData();
